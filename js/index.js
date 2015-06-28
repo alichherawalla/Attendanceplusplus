@@ -21,18 +21,17 @@ var e = document.getElementById("Division");
 var Division = e.options[e.selectedIndex].text;
 }
 function csv(){
-alert("cd");
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "http://localhost/www/data.txt",
+        url: "https://raw.githubusercontent.com/alichherawalla/Attendanceplusplus/master/js/test.csv",
         dataType: "text",
-        success: function(data) {processData(data);alert("sa");}
+        success: function(data) {processData(data);}
      });
 });
 function processData(allText) {
-alert("cd");  
-  var allTextLines = allText.split(/\r\n|\n/);
+
+  var allTextLines = allText.split(',');
     var headers = allTextLines[0].split(',');
     var lines = [];
 
