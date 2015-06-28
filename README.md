@@ -1,1 +1,1 @@
-# Timetable Reminder for college.
+# Timetable reminder Cordova project 
