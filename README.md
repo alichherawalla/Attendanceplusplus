@@ -1,1 +1,1 @@
-# Attendanceplusplus
+# Timetable Reminder for college.
