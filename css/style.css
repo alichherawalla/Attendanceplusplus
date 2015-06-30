@@ -19,9 +19,9 @@ margin:0;
 }
 
 .SwingIn{
--webkit-animation:swing 1200ms 4000ms  ease both;
--moz-animation:swing 1200ms 4000ms  ease both;
-animation:swing 1200ms 4000ms  ease both;
+-webkit-animation:swing 1200ms  3500ms  ease both;
+-moz-animation:swing 1200ms  3500ms  ease both;
+animation:swing 1200ms  3500ms  ease both;
 position:absolute;
 z-index:4;
 
@@ -62,9 +62,9 @@ transform:translateX(74.1vw);
 
 @media only screen and (max-width:340px) {
 .SwingIn{
--webkit-animation:swing2 1200ms 4000ms  ease both;
--moz-animation:swing2 1200ms 4000ms  ease both;
-animation:swing2 1200ms 4000ms  ease both;
+-webkit-animation:swing2 1200ms  3500ms  ease both;
+-moz-animation:swing2 1200ms  3500ms  ease both;
+animation:swing2 1200ms  3500ms  ease both;
 }
 
 }
@@ -108,9 +108,9 @@ transform:translateX(78.1vw);
 
 @media only screen and (min-width:355px) and (max-width:365px) and (-webkit-device-pixel-ratio: 2){
 .SwingIn{
--webkit-animation:swing3 1200ms 4000ms  ease both;
--moz-animation:swing3 1200ms 4000ms  ease both;
-animation:swing3 1200ms 4000ms  ease both;
+-webkit-animation:swing3 1200ms  3500ms  ease both;
+-moz-animation:swing3 1200ms  3500ms  ease both;
+animation:swing3 1200ms  3500ms  ease both;
 
 }
 
@@ -147,9 +147,9 @@ transform:translateX(77.2vw);
 
 @media only screen and (min-width:375px) and (max-width:390px)  {
 .SwingIn{
--webkit-animation:swing4 1200ms 4000ms  ease both;
--moz-animation:swing4 1200ms 4000ms  ease both;
-animation:swing4 1200ms 4000ms  ease both;
+-webkit-animation:swing4 1200ms  3500ms  ease both;
+-moz-animation:swing4 1200ms  3500ms  ease both;
+animation:swing4 1200ms  3500ms  ease both;
 
 }
 
@@ -168,9 +168,9 @@ transform:translateX(75.4vw);
 }
 }
 .SwingIn1{
--webkit-animation:swing1 1000ms 4400ms  ease both;
--moz-animation:swing1 1000ms 4400ms  ease both;
-animation:swing1 1000ms 4400ms  ease both;
+-webkit-animation:swing1 1000ms 3700ms  ease both;
+-moz-animation:swing1 1000ms 3700ms  ease both;
+animation:swing1 1000ms 3700ms  ease both;
 -webkit-border-bottom-left-radius:132px;
 -webkit-border-top-left-radius:0px;
 }
@@ -189,9 +189,9 @@ transform:translateX(75.4vw);
 }
 }
 .SwingIn1{
--webkit-animation:swing1 1000ms 4400ms  ease both;
--moz-animation:swing1 1000ms 4400ms  ease both;
-animation:swing1 1000ms 4400ms  ease both;
+-webkit-animation:swing1 1000ms 3700ms  ease both;
+-moz-animation:swing1 1000ms 3700ms  ease both;
+animation:swing1 1000ms 3700ms  ease both;
 -webkit-border-bottom-left-radius:132px;
 -webkit-border-top-left-radius:0px;
 }

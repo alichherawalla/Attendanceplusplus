@@ -1,9 +1,54 @@
+/*
+//get keyname by index
+var keyName = window.localStorage.key(0);
+
+//put a value
+window.localStorage.setItem("key", "value");
+
+//get a value by key
+var value = window.localStorage.getItem("key");
+
+//remove a value by key
+window.localStorage.removeItem("key");
+
+//flush local storage/all key value pairs
+window.localStorage.clear();
+*/
+
+
+
+
+
+
+
+
+var n;
 var division;
 var year;
 var department;
+var flag=0;
+var flag1=0;
+
+
+function initialiseInfo(){
+
+year = window.localStorage.getItem("year");
+division = window.localStorage.getItem("division");
+department = window.localStorage.getItem("department");
+var d = new Date();
+n = d.getDay();
+flag1=1;
+csvDateSelector(n);
+
+}
+
+
 function Year(){
+
 var e = document.getElementById("Year");
 year = e.options[e.selectedIndex].text;
+window.localStorage.setItem("year",year);
+
 }
 function Department(){
 var e = document.getElementById("Department");
@@ -14,43 +59,72 @@ document.getElementById("DivisionOption").innerHTML="A";
 document.getElementById("DivisionOption1").style.visibility="none";
 $('#DivisionOption1').prop('disabled',true);
 }
+window.localStorage.setItem("department", department);
+
 }
 function Division(){
 var e = document.getElementById("Division");
 division = e.options[e.selectedIndex].text;
+window.localStorage.setItem("division", division);
+}
+var day;
+function csvDateSelector(day1){
+flag=1;
+day=parseInt(day1);
+var d = new Date();
+n = d.getDay();
+if (day==n){
+csv();
+}
+else{
+n=day;
+csv();
+}
 }
 
 function csv(){
-var myDiv = document.getElementById("box");
 	var myApp=document.getElementById("dvCSV");
-	  myDiv.style.display = "none";
+	var box=document.getElementById("box");
+	var DayMenu=document.getElementById("DayMenu");
 	  myApp.style.display="block";
-      
-$(document).ready(function() {
+
+	  DayMenu.style.display="block";
+if(flag1==0){	
+	box.style.display="none";
+}
+	$(document).ready(function() {
+
     if (department=="IT")
 	{
+	
 	$.ajax({
         type: "GET",
-        url: "https://raw.githubusercontent.com/alichherawalla/Attendanceplusplus/master/js/test.csv",
+        url: "https://raw.githubusercontent.com/alichherawalla/Attendanceplusplus/master/IT.csv",
         dataType: "text",
-        success: function(data) {processData(data);}
+        success: function(data) {processDataIT(data);}
      });
 	 }
 	 if(department=="Comp"){
+	 
 	 $.ajax({
         type: "GET",
         url: "https://raw.githubusercontent.com/alichherawalla/Attendanceplusplus/master/js/test.csv",
         dataType: "text",
-        success: function(data) {processData(data);}
+        success: function(data) {processDataComp(data);}
      });
 	 }
 });
-function processData(fileUpload) {
+function processDataComp(fileUpload) {
+
 var low;
 var high;
-
+if(flag==1){
+n=day;
+}
+else{
 var d = new Date();
-var n = d.getDay();
+n = d.getDay();
+}
 
 if(n<=6)
 {
@@ -464,3 +538,189 @@ if((j<1) | (j>=low & j<high))
     
 }
 }
+
+
+function processDataIT(fileUpload) {
+var low;
+var high;
+if(flag==1){
+n=day;
+}
+else{
+var d = new Date();
+n = d.getDay();
+}
+if(n<=6)
+{
+
+n=n*10-11;
+
+}
+if(year=="SE")
+{
+{
+if(n==-1){
+
+n=0;
+low=0+n;
+high=3+n;
+
+}
+else if(n==9){
+
+low=0+n-2;
+high=3+n-3;
+
+}
+
+else if(n==19)
+{
+low=0+n-6;
+high=3+n-7;
+
+}
+else if(n==29)
+{
+low=0+n-10;
+high=3+n-11;
+
+}
+
+
+else if(n==39)
+{
+low=0+n-14;
+high=3+n-15;
+
+}
+
+else if(n==49)
+{
+low=0+n-18;
+high=3+n-19;
+
+}
+}
+
+}
+if(year=="TE")
+{
+{
+if(n==-1){n=0;
+low=3+n;
+high=5+n;
+}
+else if(n==9){
+low=3+n-3;
+high=5+n-3;
+
+}
+
+
+else if(n==19)
+{
+low=3+n-7;
+high=5+n-7;
+
+}
+else if(n==29)
+{
+low=3+n-11;
+high=5+n-11;
+
+}
+else if(n==39)
+{
+low=3+n-15;
+high=5+n-15;
+
+}
+
+else if(n==49)
+{
+low=3+n-19;
+high=5+n-19;
+
+}
+
+}
+}
+
+if(year=="BE")
+{
+{
+if(n==-1){n=0;
+low=5+n;
+high=7+n;
+}
+
+else if(n==9){
+low=5+n-3;
+high=7+n-3;
+
+}
+else if(n==19){
+low=5+n-7;
+high=7+n-7;
+
+}
+
+else if(n==29)
+{
+low=5+n-11;
+high=7+n-11;
+
+}
+else if(n==39)
+{
+low=5+n-15;
+high=7+n-15;
+
+}
+else if(n==49)
+{
+low=5+n-19;
+high=7+n-19;
+
+}
+}
+}
+
+
+
+
+
+var allText=fileUpload;
+  var allTextLines = allText.split("\n");;
+    var headers = allTextLines[5].split(',');
+    var lines = [];
+    var tarr = [];
+    
+	var table = document.createElement("table");
+                var rows = allText.split("\n");
+				
+               for (var i = 4; i < 38; i++){
+			    var row = table.insertRow(-1);
+                    var cells = rows[i].split(",");
+j=0;
+while(j<high){
+if((j<1) | (j>=low & j<high))      
+	   {
+	   
+                        var cell = row.insertCell(-1);
+                        cell.innerHTML = cells[j];
+        }
+		j++;
+		}
+	    }
+		  var dvCSV = document.getElementById("dvCSV");
+                dvCSV.innerHTML = "";
+					
+                dvCSV.appendChild(table);
+				
+			 
+				
+    }
+	
+    
+
