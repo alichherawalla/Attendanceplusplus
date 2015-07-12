@@ -1,0 +1,963 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
+
+* { font-family: 'Roboto', sans-serif; line-height:1.2; vertical-align:middle; }
+
+body { background:#d5d5d5;  }
+
+.ct-chart .ct-bar {
+    stroke-width: 35px;
+    stroke: #0096A6;
+}
+
+.ct-chart .ct-label.ct-horizontal {
+    text-align: center;
+    font-size: 10px;
+    color:#000000;
+}
+#chart2 .ct-label.ct-horizontal {
+    text-align: center;
+    font-size: 10px;
+    color:#000000;
+    text-anchor:middle;
+    margin-left:-2em;
+}
+input, .card {
+    position:relative;
+    z-index:2;
+}
+input {
+    display:block;
+    width:8rem;
+    margin:0.5em ;
+    border:0;
+    font-size:1.2rem;
+    padding-right:2em;
+    border-radius:3px;
+    box-shadow:0 1px 2px #aaa;
+
+}
+
+input:focus {
+    margin:0 1rem 1rem;
+    outline:0;
+}
+
+input:focus + header {
+    transform:translate3d(0,-10rem,0);
+    opacity:0;
+}
+
+
+.card {
+    position: relative;
+    left: 7%;
+    float: left;
+    padding: 1.5rem;
+    width: 38%;
+    box-shadow: 0 1px 2px #aaa;
+    background: white;
+    margin-right: 2rem;
+    margin-top: .5em;
+    margin-bottom: 1rem;
+    top: 15em;
+    border-radius: 7px;
+    user-select: none;
+    -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+    -webkit-transform-origin: top left;
+    animation: fly-in-from-left 0.5s 1s ease both;
+    transform-origin: top left;
+}
+@media only screen and (max-width:500px){
+.card {
+    transform-style: preserve-3d;
+    position: relative;
+    left: 7%;
+    float: left;
+    padding: 1.5rem;
+    width: 70%;
+    box-shadow: 0 1px 2px #aaa;
+    background: white;
+    top: 40%;
+
+    margin-right: 2rem;
+    margin-top: .5em;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    user-select: none;
+    -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+    -webkit-transform-origin: top left;
+    animation: fly-in-from-left 0.5s 1s ease both;
+    transform-origin: top left;
+}
+}
+@media only screen and (max-width:700px){
+    .card {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        top: 15em;
+        left: 10%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .card {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        top: 15em;
+        left: 10%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media only screen and (max-width:960px){
+
+
+
+
+    .ct-chart .ct-bar {
+        stroke-width: 30px;
+        stroke: #0096A6;
+    }
+
+    .ct-chart .ct-label.ct-horizontal {
+        text-align: center;
+        font-size: 7px;
+        color:#000000;
+        text-anchor:start;
+    }
+    #chart2 .ct-label.ct-horizontal {
+        text-align: center;
+        font-size: 10px;
+        color:#000000;
+        text-anchor:middle;
+        margin-left:-2em;
+
+    }
+
+
+
+
+
+
+    .card {
+        position: relative;
+        top: 15em;
+        left: 8%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:960px)and(max-width: 1380px) {
+    .card {
+        transform-style: preserve-3d;
+        position: relative;
+        left: 7%;
+        float: left;
+        padding: 1.5rem;
+        width: 38%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:700px)and(max-width: 960px){
+    .card{
+        position: relative;
+        right:5%;
+        left: 7%;
+        float: left;
+        padding: 1.5rem;
+        width: 36%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:500px)and(max-width: 700px){
+    .card{
+        position: relative;
+
+        left: 7%;
+        right:4%;
+        float: left;
+        padding: 1.5rem;
+        width: 77%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media all and (min-width:320px)and(max-width: 500px){
+    .card{
+        position: relative;
+        left: 17%;
+        float: left;
+        padding: 1.5rem;
+        width: 70%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 1rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left 0.5s 1s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left 0.5s 1s ease both;
+        transform-origin: top left;
+    }
+}
+.card:nth-child(even){
+
+    animation-name:fly-in-from-right;
+    transform-origin:top right;
+    -webkit-animation-name:fly-in-from-right;
+     -webkit-transform-origin:top right;
+
+}
+
+@keyframes fly-in-from-left {
+    from {
+        transform:translateY(15rem) rotate(15deg);
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-right {
+    from {
+        transform:translateY(15rem) rotate(-15deg);
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-left {
+    from {
+        -webkit-transform:translateY(15rem) rotate(15deg);
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-right {
+    from {
+        -webkit-transform:translateY(15rem) rotate(-15deg);
+        opacity:0;
+    }
+}
+
+
+
+
+.card1 {
+    perspective: 1000;
+    transform-style: preserve-3d;
+    position: relative;
+    left: 7%;
+    float: left;
+    padding: 1.5rem;
+    width: 38%;
+    box-shadow: 0 1px 2px #aaa;
+    background: white;
+    margin-right: 2rem;
+    margin-top: .5em;
+    margin-bottom: 1rem;
+    top: 15em;
+    border-radius: 7px;
+    user-select: none;
+    -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+    -webkit-transform-origin: top left;
+    animation: fly-in-from-left-info .3s .3s ease both;
+    transform-origin: top left;
+}
+@media only screen and (max-width:500px){
+    .card1 {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        left: 7%;
+        float: left;
+        padding: 1.5rem;
+        width: 70%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        top: 40%;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+@media only screen and (max-width:700px){
+    .card1 {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        top: 15em;
+        left: 10%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .card1 {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        top: 15em;
+        left: 10%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media only screen and (max-width:960px){
+    .card1 {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        top: 15em;
+        left: 10%;
+        float: left;
+        padding: 1.5rem;
+        width: 74%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:960px)and(max-width: 1380px) {
+    .card1 {
+        perspective: 1000;
+        transform-style: preserve-3d;
+        position: relative;
+        left: 7%;
+        float: left;
+        padding: 1.5rem;
+        width: 38%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:700px)and(max-width: 960px){
+    .card1{
+        position: relative;
+        right:5%;
+        left: 7%;
+        float: left;
+        padding: 1.5rem;
+        width: 36%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+@media all and (min-width:500px)and(max-width: 700px){
+    .card1{
+        position: relative;
+
+        left: 7%;
+        right:4%;
+        float: left;
+        padding: 1.5rem;
+        width: 77%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+
+@media all and (min-width:320px)and(max-width: 500px){
+    .card1{
+        position: relative;
+        left: 17%;
+        float: left;
+        padding: 1.5rem;
+        width: 70%;
+        box-shadow: 0 1px 2px #aaa;
+        background: white;
+        margin-right: 1rem;
+        margin-top: .5em;
+        margin-bottom: 1rem;
+        top: 15em;
+        border-radius: 7px;
+        user-select: none;
+        -webkit-animation: fly-in-from-left-info .3s .3s ease both;
+        -webkit-transform-origin: top left;
+        animation: fly-in-from-left-info .3s .3s ease both;
+        transform-origin: top left;
+    }
+}
+.card1:nth-child(even){
+    animation-name:fly-in-from-left-right;
+    transform-origin:top right;
+    -webkit-animation-name:fly-in-from-left-right;
+    -webkit-transform-origin:top right;
+
+}
+
+
+
+
+
+
+/*
+--card flip animation
+.card1 {
+    position: relative;
+    float: left;
+    padding-bottom: 25%;
+    width: 25%;
+    text-align: center;
+}
+
+.card1:nth-child(1) {
+    margin-left: -3px;
+    margin-right: 1px;
+}
+
+.card1:nth-child(2),
+.card:nth-child(3) {
+    margin-right: 1px;
+}
+.card1__front,
+.card1__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card1__front,
+.card1__back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.card1__front {
+    background-color: #ff5078;
+}
+
+.card1__back {
+    background-color: #1e1e1e;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card1__text {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 20px;
+    color: #00bcd4;
+    font-family: "Roboto Slab", serif;
+    line-height: 20px;
+}
+.card1.effect__click.flipped .card1__front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card1.effect__click.flipped .card1__back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+/*3d animation over */
+
+.cardinfoicon {
+    position:absolute;
+    height:1em;
+    font-size:.9rem;
+    top:1.5rem;
+    right:1rem;
+    text-align:center;
+    }
+
+
+h1 {
+    font-size:2rem;
+    font-weight:200;
+}
+strong {
+    font-weight:300;
+    color:#539D00;
+}
+
+h2 {
+    font-size:.9rem;
+    line-height:2.5;
+    color:gray;
+    font-weight:400;
+}
+
+.graphvalues {
+    display:inline-block;
+    position:relative;
+    font-size:10px;
+    line-height:1;
+    color:gray;
+    font-weight:400;
+    margin:-2em;
+    margin-left:0;
+    top:2em;
+
+}
+
+h3
+{
+    font-size:1.3em;
+    font-weight:300;
+}
+
+hr
+{
+    border-top: 1px solid #e5e5e5;
+    margin-left: -24px;
+    margin-right: -24px;
+
+
+}
+
+
+div.transbox,
+div.infoi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.infoi,div.profile {
+    z-index: 10;
+    margin-top: 8.5rem;
+
+}
+
+header {
+
+}
+#banner{
+    position:relative;
+    zIndex:999;
+    top:0;
+    left:0;
+    right:0;
+    height:7.5em;
+    transition:transform .5s, opacity .3s;
+    overflow:hidden;
+    margin-bottom: 0;
+    margin-right:0;
+    padding-bottom: 0;
+}
+@media only screen and (min-width:500px) and (max-width:960px)
+{
+    #banner{
+        position:relative;
+        zIndex:999;
+        top:0;
+        left:0;
+        right:0;
+        height:10.5em;
+        transition:transform .5s, opacity .3s;
+        overflow:hidden;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+}
+div.transbox {
+    display:block;
+    height:20%;
+    top:10.5em;
+    width:100%;
+    bottom:0;
+    background: rgba(255,255,255,0.6);
+    padding-top:.5em;
+    position:absolute;
+    padding-bottom:.5em;
+
+}
+
+
+
+@media only screen and (min-width:780px) and (max-width:960px){
+    div.transbox{
+        display:block;
+        height:20%;
+        top:12.2em;
+        width:100%;
+        bottom:0;
+        background: rgba(255,255,255,0.6);
+        padding-top:.5em;
+        position:absolute;
+        padding-bottom:1em;
+        font-size:14px;
+
+
+
+    }
+    /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width:700px) and (max-width:780px){
+    div.transbox{
+        display:inline-block;
+        position:relative;
+        margin-top:4.2em;
+        height:20%;
+
+
+        width:100%;
+        background: rgba(255,255,255,0.6);
+        padding-top:1em;
+        padding-bottom:1em;
+        font-size:11px;
+        overflow:hidden;
+
+
+    }
+    /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width:500px) and (max-width:700px){
+    div.transbox{
+        display:inline-block;
+        position:relative;
+        margin-top:4.5em;
+        height:20%;
+
+        width:100%;
+        background: rgba(255,255,255,0.6);
+        padding-top:1em;
+        padding-bottom:1em;
+        font-size:11px;
+
+
+    }
+    /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (max-width:500px){
+    div.transbox{
+        display:block;
+        height:22%;
+        top:15em;
+        width:100%;
+        bottom:0;
+        font-size:15px;
+        background: rgba(255,255,255,0.6);
+        padding-top:1em;
+        position:absolute;
+        padding-bottom:.5em;
+        overflow:hidden;
+        margin-bottom:2%;
+        font-size:11px;
+
+    }
+    /* styles for browsers larger than 960px; */
+}
+
+div.map {
+    margin: 10px 0;
+    width:75%;
+    height:5px;
+    position:absolute;
+    margin-top: 18px;
+}
+div.percent {
+    float: right;
+    top:0;
+    margin-right: 5%;
+}
+div.graph {
+    left: 0;
+    margin: 0 auto; }
+
+.barcolor2{
+    stroke:#00bcd4;
+    stroke-width: 2%;
+    stroke-dasharray: 5% 2%;
+    animation: dashoffset-seven 200ms infinite linear;
+
+
+}
+.barcolor1 {
+    stroke: #0096A6;
+    stroke-width: 2%;
+
+}
+
+.legend {
+    stroke: #0096A6;
+    stroke-width: 2px;
+
+}
+
+.animateinfo {
+    content:"evfbe";
+    -webkit-animation-name: cssAnimation;
+    -webkit-animation-duration:3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+
+
+}
+@-webkit-keyframes cssAnimation {
+    from {
+        -webkit-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+    }
+    to {
+        -webkit-transform: rotate(360deg) scale(10) skew(0deg) translate(0px);
+    }
+}
+
+
+@keyframes fly-in-from-left-info-front {
+    from {
+        transform: rotateY(180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-right-info-front {
+    from {
+        transform:rotateY(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-left-info-front {
+    from {
+        -webkit-transform:rotateY(180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-right-info-front {
+    from {
+        -webkit-transform:rotateY(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-left-info-back {
+    from {
+        transform:rotateY(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-right-info-back {
+    from {
+        transform:rotateY(180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-left-info-back {
+    from {
+        -webkit-transform:rotateY(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-right-info-back {
+    from {
+        -webkit-transform:rotateY(180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
+

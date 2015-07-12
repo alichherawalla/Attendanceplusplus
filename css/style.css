@@ -1,13 +1,34 @@
 
 
 
+ #DayMenu{
+ 
+ 
+ -webkit-animation: fly-in-from-left-info-front .3s .3s ease both;
+    -webkit-transform-origin: top left;
+    animation: fly-in-from-left-info-front .3s .3s ease both;
+    transform-origin: top left;
+ }
+ 
+ @-webkit-keyframes fly-in-from-left-info-front {
+    from {
+        -webkit-transform:rotateY(180deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity:0;
+    }
+}
 
+ 
 #dvCSV table{
 border-spacing:0px;
 border-radius:50px;
+margin-top:-3.5em;
 }
 #dvCSV table td{
-font-size:1.3vh;
+font-size:1.8vh;
 border-radius:75px;
 border: 1px solid white;
 
@@ -19,9 +40,9 @@ margin:0;
 }
 
 .SwingIn{
--webkit-animation:swing 1200ms  3500ms  ease both;
--moz-animation:swing 1200ms  3500ms  ease both;
-animation:swing 1200ms  3500ms  ease both;
+-webkit-animation:swing 1200ms  2500ms  ease both;
+-moz-animation:swing 1200ms  2500ms  ease both;
+animation:swing 1200ms  2500ms  ease both;
 position:absolute;
 z-index:4;
 
@@ -38,8 +59,8 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(74.1vw);
--webkit-transform:translateX(74.1vw);
+transform:translateX(91.3vw);
+-webkit-transform:translateX(91.3vw);
 }
 }
 
@@ -55,16 +76,16 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(74.1vw);
--webkit-transform:translateX(74.1vw);
+transform:translateX(94.1vw);
+-webkit-transform:translateX(94.1vw);
 }
 }
 
 @media only screen and (max-width:340px) {
 .SwingIn{
--webkit-animation:swing2 1200ms  3500ms  ease both;
--moz-animation:swing2 1200ms  3500ms  ease both;
-animation:swing2 1200ms  3500ms  ease both;
+-webkit-animation:swing2 1200ms  2500ms  ease both;
+-moz-animation:swing2 1200ms  2500ms  ease both;
+animation:swing2 1200ms  2500ms  ease both;
 }
 
 }
@@ -82,8 +103,8 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(78.1vw);
--webkit-transform:translateX(78.1vw);
+transform:translateX(91.5vw);
+-webkit-transform:translateX(91.5vw);
 }
 }
 
@@ -100,17 +121,74 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(78.1vw);
--webkit-transform:translateX(78.1vw);
+transform:translateX(92vw);
+-webkit-transform:translateX(92vw);
 }
 }
+
+
+
+
+
+
+@media only screen and (min-width:315px) and (max-width:330px) {
+.SwingIn{
+-webkit-animation:swing2 1200ms  2500ms  ease both;
+-moz-animation:swing2 1200ms  2500ms  ease both;
+animation:swing2 1200ms  2500ms  ease both;
+}
+
+}
+
+
+@keyframes swing2{
+from{
+transform:translateX(00%);
+-webkit-transform:translateX(000%);
+
+}
+50%{
+transform:translateX(00%);
+-webkit-transform:translateX(000%);
+}
+
+100%{
+transform:translateX(92.6vw);
+-webkit-transform:translateX(92.6vw);
+}
+}
+
+
+@-webkit-keyframes swing2{
+from{
+transform:translateX(00%);
+-webkit-transform:translateX(000%);
+
+}
+50%{
+transform:translateX(00%);
+-webkit-transform:translateX(000%);
+}
+
+100%{
+transform:translateX(91.4vw);
+-webkit-transform:translateX(91.4vw);
+}
+}
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width:355px) and (max-width:365px) and (-webkit-device-pixel-ratio: 2){
 .SwingIn{
--webkit-animation:swing3 1200ms  3500ms  ease both;
--moz-animation:swing3 1200ms  3500ms  ease both;
-animation:swing3 1200ms  3500ms  ease both;
+-webkit-animation:swing3 1200ms  2500ms  ease both;
+-moz-animation:swing3 1200ms  2500ms  ease both;
+animation:swing3 1200ms  2500ms  ease both;
 
 }
 
@@ -124,8 +202,8 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(77.2vw);
--webkit-transform:translateX(77.2vw);
+transform:translateX(91.9vw);
+-webkit-transform:translateX(91.9vw);
 }
 }
 
@@ -139,17 +217,17 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(77.2vw);
--webkit-transform:translateX(77.2vw);
+transform:translateX(92.2vw);
+-webkit-transform:translateX(92.2vw);
 }
 }
 
 
 @media only screen and (min-width:375px) and (max-width:390px)  {
 .SwingIn{
--webkit-animation:swing4 1200ms  3500ms  ease both;
--moz-animation:swing4 1200ms  3500ms  ease both;
-animation:swing4 1200ms  3500ms  ease both;
+-webkit-animation:swing4 1200ms  2500ms  ease both;
+-moz-animation:swing4 1200ms  2500ms  ease both;
+animation:swing4 1200ms  2500ms  ease both;
 
 }
 
@@ -163,14 +241,27 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(75.4vw);
--webkit-transform:translateX(75.4vw);
+transform:translateX(91.7vw);
+-webkit-transform:translateX(91.7vw);
+}
+}
+
+@-webkit-keyframes swing4{
+from{}
+50%{
+transform:translateX(00%);
+-webkit-transform:translateX(000%);
+}
+
+100%{
+transform:translateX(91.7vw);
+-webkit-transform:translateX(91.7vw);
 }
 }
 .SwingIn1{
--webkit-animation:swing1 1000ms 3700ms  ease both;
--moz-animation:swing1 1000ms 3700ms  ease both;
-animation:swing1 1000ms 3700ms  ease both;
+-webkit-animation:swing1 1000ms 2700ms  ease both;
+-moz-animation:swing1 1000ms 2700ms  ease both;
+animation:swing1 1000ms 2700ms  ease both;
 -webkit-border-bottom-left-radius:132px;
 -webkit-border-top-left-radius:0px;
 }
@@ -184,14 +275,14 @@ transform:translateX(00%);
 }
 
 100%{
-transform:translateX(75.4vw);
--webkit-transform:translateX(75.4vw);
+transform:translateX(85.4vw);
+-webkit-transform:translateX(85.4vw);
 }
 }
 .SwingIn1{
--webkit-animation:swing1 1000ms 3700ms  ease both;
--moz-animation:swing1 1000ms 3700ms  ease both;
-animation:swing1 1000ms 3700ms  ease both;
+-webkit-animation:swing1 1000ms 2700ms  ease both;
+-moz-animation:swing1 1000ms 2700ms  ease both;
+animation:swing1 1000ms 2700ms  ease both;
 -webkit-border-bottom-left-radius:132px;
 -webkit-border-top-left-radius:0px;
 }
@@ -271,7 +362,7 @@ background-color:#e8e050;
 	width:150px;
 	font-family:"footlight MT light";
 	border-radius:20px;
-	padding-top:10px;
+	margin-top:10px;
 	padding-bottom:10px;
 	text-align:center;
 	padding-left:10px;
@@ -300,17 +391,17 @@ border-radius:15px;
 margin-right:auto;
 margin-left:auto;
 background-color:#e8e050;
-padding-top:3px;
+margin-top:3px;
 box-shadow:5px 5px 5px black;
 }
 
 #myDiv{
 width:100%;
-padding-top:25vw;
+margin-top:25vw;
 margin-left:auto;
 margin-right:auto;
 position:absolute;
-height:100vh;
+height:75vh;
 background-color:#ffffff;
 z-index:100;
 display:none;

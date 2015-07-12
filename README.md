@@ -1,1 +1,0 @@
-# Timetable reminder Cordova project 
